@@ -5,10 +5,12 @@ let x = window.innerWidth
 let y = window.innerHeight
 let count = 0
 let img;
+let lightning;
 
 function preload()
 {
   img = loadImage('door.png');
+  lightning = loadImage('lightning.png')
 }
 
 function setup() {
@@ -29,7 +31,10 @@ function draw() {
   else if(count == 1) {background(150, 150, 220);}
   else if(count == 2) {background(40, 75, 150);}
   else {background(0, 44, 240);}
-
+  if(keyIsPressed == true)
+  {
+    image(lightning, x/2, y/10)
+  }
   
 
   fill(255, 241, 84)
