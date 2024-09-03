@@ -31,15 +31,17 @@ function draw() {
   else if(count == 1) {background(150, 150, 220);}
   else if(count == 2) {background(40, 75, 150);}
   else {background(0, 44, 240);}
-  if(keyIsPressed == true)
-  {
-    image(lightning, x/2, y/10)
-  }
+
   
 
   fill(255, 241, 84)
   strokeWeight(0)
   ellipse(mouseX, mouseY, x/2, x/2)
+
+    if(keyIsPressed == true)
+  {
+    image(lightning, x/2, y/10)
+  }
   
   fill(54, 224, 52)
   rect(0, y/1.2, x, y)
