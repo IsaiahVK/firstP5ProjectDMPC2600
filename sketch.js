@@ -1,6 +1,3 @@
-
-//variables allow change in resolution, designed for 16:9 aspect ratio
-//original resolution : 640x480
 let x = window.innerWidth
 let y = window.innerHeight
 let count = 0
@@ -15,7 +12,6 @@ function preload()
 
 function setup() {
   createCanvas(x, y);
-  
 }
 
 function draw() {
