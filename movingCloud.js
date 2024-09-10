@@ -84,8 +84,8 @@ function alienShot()
 
 function generateAlien()
 {
-	alien.x = Math.random()*(x-250) //0, x-alienImg.width
-	alien.y = (Math.random()*(y-250))+cloudObj.y //cloud.y+cloud.height, y-alienImg.height
+	alien.x = getRandom(0, x-alienImg.width) //0, x-alienImg.width
+	alien.y = getRandom(cloudObj.y+cloud.height, y-alienImg.height) //cloudObj.y+cloud.height, y-alienImg.height
 	console.log(alien.x)
 	console.log(alien.y)
 }
@@ -94,7 +94,6 @@ function keyPressed()
 {
 	if(key === 'f')
 	{
-		console.log('created')
 		shoot()
 	}
 }
@@ -165,4 +164,9 @@ function cloudRight()
 	{
 		cloudObj.x += 10
 	}
+}
+
+function getRandom(min, max) 
+{
+  return Math.random() * (max - min) + min;
 }
